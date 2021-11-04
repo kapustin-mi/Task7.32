@@ -8,7 +8,7 @@ public class Main {
         ProgramTest test = new ProgramTest();
         TestResult result = test.checkProgram();
 
-        if(result.getIsProgramCorrect()) {
+        if (result.getIsProgramCorrect()) {
             int arrayLength = readLength();
 
             int[] arr = new int[arrayLength];
