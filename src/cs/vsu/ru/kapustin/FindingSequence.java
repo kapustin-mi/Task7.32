@@ -30,7 +30,7 @@ public class FindingSequence {
         return new ResultOfFinding(lastIndexOfSequence, oldSequenceLength, oldFirstSequenceIndex);
     }
 
-    private static ResultOfFinding findSequenceLengthAndFirstIndex(int firstSequenceIndex, int[] arr) {
+    private ResultOfFinding findSequenceLengthAndFirstIndex(int firstSequenceIndex, int[] arr) {
         int sequenceLength = 1;
 
         for (int i = firstSequenceIndex + 1; i < arr.length; i++) {
@@ -44,7 +44,7 @@ public class FindingSequence {
         return new ResultOfFinding(arr.length, sequenceLength, firstSequenceIndex);
     }
 
-    private static boolean equalToOneOfPreviousOnes(int[] arr, int startingIndexForComparison, int i) {
+    private boolean equalToOneOfPreviousOnes(int[] arr, int startingIndexForComparison, int i) {
         for (int j = startingIndexForComparison; j < i; j++) {
             if (arr[i] == arr[j]) {
                 return false;
@@ -54,7 +54,7 @@ public class FindingSequence {
         return true;
     }
 
-    private static int findFirstIndexOfNewSequence(int firstIndexOfSequence, int lastIndexOfSequence, int[] arr) {
+    private int findFirstIndexOfNewSequence(int firstIndexOfSequence, int lastIndexOfSequence, int[] arr) {
         int firstIndexOfNewSequence = 0;
 
         for (int k = firstIndexOfSequence; k < lastIndexOfSequence; k++) {
